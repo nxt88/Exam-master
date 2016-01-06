@@ -1,0 +1,24 @@
+<template name="commentSubmit">
+  <form name="comment" class="comment-form form">
+    <table style="width:100%; margin-top: 15px;">
+      <tr>
+        <td style="width:60px;" valign="top">
+          {{#if srcImage}}
+            <img src="{{ srcImage}}" class="cs-authorImg-detail">
+          {{else}}
+              <img src="{{ srcImage}}/img/app/user.png" class="cs-authorImg-detail">
+          {{/if}}
+        </td>
+        <td valign="top">
+          <div class="form-group {{errorClass 'body'}}">
+              <div class="controls">
+                  <textarea name="body" id="bodyComment" class="form-control" rows="3" maxlength="1000" placeholder="Comment..."></textarea>
+                  <span class="help-block">{{errorMessage 'body'}}</span>
+              </div>
+              <button type="submit" class="btn btn-primary">Add Comment</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+</template>

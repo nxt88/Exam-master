@@ -1,0 +1,26 @@
+<template name="layout">
+    {{> topbar}}
+  <div class="container">
+    {{> header}}
+    
+    {{> errors}}
+
+    <div id="main">
+      {{> yield}}
+
+      {{> right_button}}
+
+      <!--
+      <div class="fb-page"
+        data-href="https://www.facebook.com/dethiaptechaz"
+        data-width="200"
+        data-hide-cover="false"
+        data-show-facepile="true" style="top: 100px; right: 0; width:200px; height:100px; position: fixed;">
+      </div>
+    -->
+    </div>
+  </div>
+
+  {{> footer}}
+
+</template>

@@ -1,0 +1,27 @@
+<template name="commentItem">
+  <li>
+    <table style="width:100%; margin-bottom: 15px;">
+      <tr>
+        <td style="width:60px;" valign="top">
+          <img src="{{ authorImg}}" class="cs-authorImg-detail" />
+        </td>
+        <td valign="top" style="text-align: left;">
+          <p class="cs-cm-author"><a href='https://facebook.com/{{facebookId}}' target="_blank">{{author}}</a></p>
+          <p>{{body}}</p>
+          <p>
+            <span class="date" style="background: url('{{ hostname}}/img/app/small-icons.png') no-repeat 0 0; padding: 1px 0 1px 20px;">
+              {{submittedText}}
+             </span>
+           </p>
+        </td>
+      </tr>
+    </table>
+    <h4>
+
+
+
+    </h4>
+
+    <hr/>
+  </li>
+</template>

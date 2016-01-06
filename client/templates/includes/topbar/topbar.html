@@ -1,0 +1,15 @@
+<template name="topbar">
+  <div class="cs-topbar">
+    <div class="cs-topbar-left">
+      <h1>EXAM</h1>
+    </div>
+
+    <div class="cs-topbar-right">
+      {{#if currentUser}}
+        <a id="submit" class="cs-btn-post" href="{{pathFor 'postSubmit'}}">Add Post</a>
+      {{/if}}
+
+      {{> login}}
+    </div>
+  </div>
+</template>

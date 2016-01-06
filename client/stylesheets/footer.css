@@ -1,0 +1,51 @@
+#footer{
+  z-index: 9999;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.5;
+  left:0;
+  bottom: 0;
+  display: none;
+}
+
+#footer .cs-left{
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: right;
+  padding-top: 13px;
+  color: #fff;
+}
+
+#footer .cs-right{
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+ul.social{
+  border-top: 0;
+  list-style: none;
+  display: inline-flex;
+  text-align: center;
+  margin-top: 7px;
+}
+
+ul.social li{
+  background-color: rgba(52, 51, 52, 0);
+  color: #FFF;
+  border: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.social img{
+  opacity: 0.5;
+}
+.social img:hover{
+  opacity: 1;
+}

@@ -1,0 +1,20 @@
+<template name="search">
+  <div class="cs-search">
+    <div class="cs-view">
+        <img class="cs-image-view {{classFlatView}}" src="{{ hostname}}/img/app/view.png">
+        <img class="cs-image-grid-view {{classGridView}}" src="{{ hostname}}/img/app/grid-view.png">
+    </div>
+
+    <div class="cs-category">
+      <select name="category" id="category" title="Category">
+        <option value="ALL">ALL</option>
+        {{#each options}}
+          <option value="{{key}}">{{value}}</option>
+        {{/each}}
+      </select>
+
+      <!-- <input type="text" placeholder="Free text..." class="cs-input-search" id="txtText" /> -->
+      <img class="cs-icon-search" src="{{ hostname}}/img/app/search.png" title="Search">
+    </div>
+  </div>
+</template>

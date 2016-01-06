@@ -1,0 +1,43 @@
+<template name="header">
+  <nav class="navbar navbar-default cs-header" role="navigation">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav navbar-nav">
+
+        <li class="{{activeRouteClass 'home' 'newPosts'}}">
+          <a href="{{pathFor 'newPosts'}}">New</a>
+          <span class="ms-newdocument-iconouter">
+          <img class="cs-image-new" src="{{ hostname}}/img/app/common.png">
+        </span>
+        </li>
+
+        <li class="{{activeRouteClass 'topPosts'}}">
+          <a href="{{pathFor 'topPosts'}}">Top</a>
+        </li>
+
+        <li class="{{activeRouteClass  'bestPosts'}}">
+          <a href="{{pathFor 'bestPosts'}}">Best</a>
+        </li>
+
+        <li class="{{activeRouteClass  'pendingPosts'}}">
+          <a><span id="linkPendingPost" style="cursor:pointer;">Pending</span></a>
+        </li>
+
+        {{#if currentUser}}
+          <li class="dropdown" style="float: right;">
+            {{> notifications}}
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+</template>

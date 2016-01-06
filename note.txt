@@ -1,0 +1,97 @@
+1. create app
+  meteor create simple-todos
+
+2. Run app
+  cd simple-todos
+  meteor
+
+3. Defining views with templates Agular.js
+  - Remove blaze view
+    meteor remove blaze-html-templates
+      meteor remove ecmascript
+  - Add Agular view
+      meteor add angular
+
+4. Adding user accounts
+  meteor add accounts-ui accounts-password
+  Agular
+  meteor add accounts-password dotansimha:accounts-ui-angular
+
+5. Security with methods --> Defining methods
+    meteor remove insecure
+
+6. Filtering data with publish and subscribe
+    meteor remove autopublish
+
+7. Routes
+  - Iron Router (***)
+      meteor add iron:router
+
+  - Flow Router
+      meteor add meteorhacks:flow-router
+
+7. Login with Facebook, Twitter and Google in Meteor
+  - Register
+      http://meteor.hromnik.com/blog/login-with-facebook-twitter-and-google-in-meteor
+      http://bulenttastan.net/login-with-facebook-using-meteor-js/
+  - Add package
+      meteor add accounts-facebook
+      meteor add service-configuration
+
+8. Editor
+http://questionsgroup.com/data47/2015/07/25/integrate-ckeditor-in-meteor/
+  --> https://github.com/froala/froala-reactive
+  https://atmospherejs.com/froala/editor
+  https://www.froala.com/wysiwyg-editor
+
+9. Config share facebook, ...
+  meteor add fortawesome:fontawesome
+  http://justmeteor.com/blog/implement-your-own-social-share-buttons/
+
+10. Like fb
+  meteor add mrt:facebook-sdk
+
+  https://github.com/hugesuccess/facebook-sdk
+
+
+11. 'ReferenceError: check is not defined
+      meteor add check
+      meteor add ejson
+
+12.Format date
+
+  meteor add momentjs:moment
+
+13. Slide image
+  meteor add gabrielengel:konecty-magnific-popup
+  Example:
+  http://dimsemenov.com/plugins/magnific-popup/documentation.html
+  http://codepen.io/collection/nLcqo/
+
+
+
+
+Structure code
+
+Client
+
+First, the client directory contains the following items:
+
+  helpers contains global template helpers and code for other client-only features such as error messages.
+  stylesheets contains the app’s styles.
+  templates contains the app’s templates as well as their companion JavaScript code, split into subgroups.
+  main.html and main.js hold the app’s main template and its code.
+
+Both
+
+  The lib folder contains files shared across client and server:
+
+    collections contains the code for the Posts, Comments, and Notifications collections.
+    permissions.js contains code used to define who can do what, which applies both to client and server.
+    router.js deals with client-side and server-side routes.
+Server
+
+And finally, server contains server-only code:
+
+fixtures.js contains code that will seed our database with content the first time we run the app.
+pubications.js contains our publication code.

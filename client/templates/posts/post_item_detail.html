@@ -1,0 +1,186 @@
+<template name="postItemDetail">
+  <div class="post cs-post-detail" >
+    <div class="post-content" style="width:100%;">
+      <table style="width:100%; margin-bottom: 15px; margin-left: 10px;">
+        <tr>
+          <td colspan="3" valign="top" style="padding: 5px;">
+              <h3>{{title}}</h3>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 100px;max-width: 150px;padding: 5px;" valign="midle">
+            {{#if category}}
+              <div class="post-categories postHeading-module" >
+                  <img  src="{{ hostname}}/img/app/tags.png"  />
+                  <span class="post-category category-announcements">{{ category}}</span>
+              </div>
+            {{/if}}
+          </td>
+          <td style="width:60px;padding: 5px;" valign="midle">
+            {{ votes}}
+            <img  src="{{ hostname}}/img/app/star.png" style="margin-bottom: 3px;" title="Vote"  />
+            <!-- {{pluralize votes "vote"}} -->
+          </td>
+          <td valign="top" style="text-align: left; padding: 5px;">
+            <a href="{{shareOnFacebookLink}}" onclick="window.open('{{shareOnFacebookLink}}','name','height=400,width=550'); return false;"
+              class="btn btn-facebook" >
+              <i class="fa fa-facebook" title="Share Facebook"></i>
+            </a>
+            <a href="{{shareOnTwitterLink}}" onclick="window.open('{{shareOnTwitterLink}}','name','height=400,width=550'); return false;"
+              class="btn btn-twitter" >
+              <i class="fa fa-twitter" title="Share Twitter"></i>
+            </a>
+            <a href="{{shareOnGooglePlusLink}}" onclick="window.open('{{shareOnGooglePlusLink}}','name','height=400,width=550'); return false;"
+              class="btn btn-google-plus" >
+              <i class="fa fa-google-plus" title="Share Google+"></i>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" valign="top" style="padding: 5px;">
+            {{#if authorImg}}
+              <img src="{{ authorImg}}" class="cs-authorImg">
+            {{else}}
+                <img src="{{ hostname}}/img/app/user.png" class="cs-authorImg">
+            {{/if}}
+            <span class="cs-author"><a href='https://facebook.com/{{facebookId}}' target="_blank">{{author}} </a></span>
+            <span class="date" style="background: url('{{ hostname}}/img/app/small-icons.png') no-repeat 0 0; padding: 1px 0 1px 20px; margin-left: 10px;">
+              {{submittedText}}
+           </span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" valign="top" style="padding: 5px;">
+                {{ content}}
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" valign="top" style="padding: 5px;text-align: center;">
+            <div class="cs-content-image">
+            {{#if image1}}
+              <div class="cs-post-image" title="Preview Image">
+                <img  src="{{ image1}}" class="cs-image" title="Preview Image"/>
+                <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+              </div>
+            {{/if}}
+
+            {{#if image2}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image2}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image3}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image3}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image4}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image4}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image5}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image5}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image6}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image6}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image7}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image7}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image8}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image8}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image9}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image9}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image10}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image10}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image11}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image11}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image12}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image12}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image13}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image13}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image14}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image14}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+            {{#if image15}}
+            <div class="cs-post-image" title="Preview Image">
+              <img  src="{{ image15}}" class="cs-image" title="Preview Image"/>
+              <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+            </div>
+            {{/if}}
+
+          </div>
+          </td>
+
+        </tr>
+
+      </table>
+
+      <!-- edit -->
+      {{#if ownPost}}
+        <div class="cs-post-edit">
+          <a href="{{pathFor 'postEdit'}}">
+              <img  src="{{ hostname}}/img/app/edits.png" title="Edit post">
+              </a>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</template>

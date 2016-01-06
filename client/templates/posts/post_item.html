@@ -1,0 +1,140 @@
+<template name="postItem">
+  <div class="post {{classView}}">
+    <div class="post-content">
+      <table class="cs-post-table">
+          <tr>
+            <td class="cs-td-vote" valign="middle">
+                <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+            </td>
+              <td class="cs-td-image" valign="middle">
+                <!-- <a href="{{pathFor 'postPage'}}"> -->
+                  <div class="cs-post-block">
+                    {{#if image1}}
+                      <div class="cs-post-image-block">
+                        <img  src="{{ image1}}" class="cs-imageitem"  />
+                        <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+                      </div>
+                      {{else}}
+                      <div class="cs-post-image-block">
+                        <img  src="{{ hostname}}/img/app/default.gif"  class="cs-imageitem" title="Preview Image"  />
+                      </div>
+                    {{/if}}
+
+                    {{#if image2}}
+                      <div class="cs-post-image-block" title="Preview Image">
+                        <img  src="{{ image2}}" class="cs-imageitem"  />
+                        <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+                      </div>
+                      {{else}}
+                      <div class="cs-post-image-block" title="Preview Image">
+                        <img  src="{{ hostname}}/img/app/default.gif"  class="cs-imageitem" title="Preview Image"  />
+                      </div>
+                    {{/if}}
+
+                    {{#if image3}}
+                      <div class="cs-post-image-block" title="Preview Image">
+                        <img  src="{{ image3}}" class="cs-imageitem"  />
+                        <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+                      </div>
+                      {{else}}
+                      <div class="cs-post-image-block">
+                        <img  src="{{ hostname}}/img/app/default.gif"  class="cs-imageitem" title="Preview Image"  />
+                        <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+                      </div>
+                    {{/if}}
+
+                    {{#if image4}}
+                      <div class="cs-post-image-block" title="Preview Image">
+                        <img  src="{{ image4}}" class="cs-imageitem"  />
+                        <img  src="{{ hostname}}/img/app/zoom.png" class="cs-zoom" />
+                      </div>
+                      {{else}}
+                      <div class="cs-post-image-block">
+                        <img  src="{{ hostname}}/img/app/default.gif"  class="cs-imageitem" title="Preview Image"  />
+                      </div>
+                    {{/if}}
+                  </div>
+                <!-- </a> -->
+              </td>
+              <td valign="top">
+                  <h3>
+                    <a href="{{pathFor 'postPage'}}">{{title}}</a>
+                  </h3>
+                  <p>
+                    {{contentText}}
+                  </p>
+                  <p>
+                    {{#if category}}
+                    <div class="post-categories postHeading-module">
+                        <img  src="{{ hostname}}/img/app/tags.png"  />
+                        <span class="post-category category-announcements">{{ category}}</span>
+
+                    </div>
+                    {{/if}}
+                  </p>
+
+                  <p>
+                    {{ votes }}
+                    <img  src="{{ hostname}}/img/app/star.png" style="margin-bottom: 3px; margin-right: 10px;" title="Vote"  />
+                    <!-- {{pluralize votes "vote"}} -->
+
+                    {{ commentsCount }}
+                    <a href="{{pathFor 'postPage'}}" style="background: url('{{ hostname}}/img/app/small-icons.png') no-repeat 0 -16px; padding: 1px 0 1px 20px;">
+                      <!-- {{pluralize commentsCount "comment"}} -->
+                    </a>
+
+                    <a href="{{shareOnFacebookLink}}" onclick="window.open('{{shareOnFacebookLink}}','name','height=400,width=550'); return false;"
+                      class="btn btn-facebook" >
+                      <i class="fa fa-facebook" title="Share Facebook"></i>
+                    </a>
+                    <a href="{{shareOnTwitterLink}}" onclick="window.open('{{shareOnTwitterLink}}','name','height=400,width=550'); return false;"
+                      class="btn btn-twitter" >
+                      <i class="fa fa-twitter" title="Share Twitter"></i>
+                    </a>
+                    <a href="{{shareOnGooglePlusLink}}" onclick="window.open('{{shareOnGooglePlusLink}}','name','height=400,width=550'); return false;"
+                      class="btn btn-google-plus" >
+                      <i class="fa fa-google-plus" title="Share Google+"></i>
+                    </a>
+                  </p>
+
+                  <p>
+                    {{#if authorImg}}
+                      <img src="{{ authorImg}}" class="cs-authorImg">
+                    {{else}}
+                        <img src="{{ hostname}}/img/app/user.png" class="cs-authorImg">
+                    {{/if}}
+
+                    <span class="cs-author"><a href='https://facebook.com/{{facebookId}}' target="_blank">{{ author}} </a></span>
+
+                    <span style="background: url('{{ hostname}}/img/app/small-icons.png') no-repeat 0 0; padding: 1px 0 1px 20px; margin-left: 15px;">
+                      {{ submittedText}}
+                    </span>
+                  </p>
+
+              </td>
+          </tr>
+      </table>
+
+    </div>
+
+    <!-- edit -->
+    {{#if ownPost}}
+      <div class="cs-post-edit">
+        <a href="{{pathFor 'postEdit'}}">
+            <img  src="{{ hostname}}/img/app/edits.png" title="Edit post">
+          </a>
+      </div>
+    {{/if}}
+
+    <!--
+    {{#if penddingView}}
+    <div class="cs-post-active">
+      <img id="btn-active"  src="{{ hostname}}/img/app/active.png" title="Active post">
+    </div>
+    {{/if}}
+    -->
+    <div class="cs-post-triangle">
+        <img  src="{{ hostname}}/img/app/pin.png" title="Pin" />
+    </div>
+  </div>
+</template>

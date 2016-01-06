@@ -1,0 +1,18 @@
+<template name="login">
+    <div class="cs-logininfo">
+      {{#if currentUser}}
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <img src="{{srcImage}}" class="cs-avatar" />
+          <span class="cs-loginname">{{name}}</span>
+        </a>
+        <ul class="dropdown-menu" style=" margin-top: 12px;">
+            <li><span class="cs-profiles">My profiles</span></li>
+            <li><span class="cs-mypost">My posts</span></li>
+            <li><span class="cs-mypending">My pending posts</span></li>
+            <li><span class="cs-logout">Logout</span></li>
+        </ul>
+      {{else}}
+          <a id="facebook-login" class="facebook-login" title="Login with facebook">Login</a>
+      {{/if}}
+    </div>
+</template>

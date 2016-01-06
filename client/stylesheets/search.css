@@ -1,0 +1,61 @@
+.cs-search{
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.cs-view{
+  width: 30%;
+  height: 100%;
+  float: left;
+  padding: 15px;
+}
+
+.cs-image-view{
+  margin-right: 5px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cs-image-grid-view{
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.cs-view-active{
+  opacity: 1;
+}
+
+.cs-view-deactive{
+  opacity: 0.3;
+}
+
+.cs-image-view:hover{
+  opacity: 1;
+}
+
+.cs-image-grid-view:hover{
+  opacity: 1;
+}
+
+.cs-category{
+  width: 70%;
+  height: 100%;
+  float: left;
+  padding: 15px;
+  text-align: right;
+}
+
+.cs-category select{
+  width:150px;
+  max-width:150px;
+  height: 26px;
+  margin-right: 5px;
+}
+
+.cs-icon-search{
+  cursor: pointer;
+  margin-bottom: 2px;
+}

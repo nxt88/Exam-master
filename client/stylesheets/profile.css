@@ -1,0 +1,26 @@
+.cs-profile{
+  width: 270px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.cs-profile img{
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+
+.cs-profile p{
+    padding: 5px;
+    margin: auto;
+}
+
+.cs-profile-content{
+  width: 100%;
+  height: 400px;
+}
+
+.cs-profile-content p{
+    padding: 20px;
+    margin: auto;
+}

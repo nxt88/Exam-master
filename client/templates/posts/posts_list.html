@@ -1,0 +1,32 @@
+<template name="postsList">
+  <div class="posts page">
+    <div class="wrapper">
+      {{> search}}
+
+      {{#if existItem}}
+        {{#each posts}}
+          {{> postItem}}
+        {{/each}}
+      {{else}}
+          {{> postItemNull}}
+      {{/if}}
+    </div>
+
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}" style="margin-top: 10px">
+        <span style="width: 220px;height: 60px;background: #428bca;display: inline-block;border-radius: 3px;">
+          <img  src="{{hostname}}/img/app/down.png" />
+          Show more
+        </span>
+      </a>
+      <div class="css-space"></div>
+    {{else}}
+      {{#unless ready}}
+        {{> spinner}}
+      {{/unless}}
+    {{/if}}
+
+  </div>
+
+
+</template>

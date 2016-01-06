@@ -1,0 +1,38 @@
+.comments {
+  list-style-type: none;
+  margin: 0;
+  margin-left: -40PX;
+}
+
+.comments li h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.comments li h4 .date {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.comments li h4 a {
+  font-size: 12px;
+}
+
+.comments li p:last-child {
+  margin-bottom: 0;
+}
+
+ .comments li, .comment-form {
+    background: #fff;
+    padding: 10px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+ }
+
+ .cs-cm-author{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 13px;
+    color: #428bca;
+ }

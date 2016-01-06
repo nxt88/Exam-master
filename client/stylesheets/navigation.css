@@ -1,0 +1,30 @@
+.container nav{
+    border-radius: 0 !important;
+    -webkit-box-shadow: 2px 4px 5px -1px rgba(148,142,148,1);
+    -moz-box-shadow: 2px 4px 5px -1px rgba(148,142,148,1);
+    box-shadow: 2px 4px 5px -1px rgba(148,142,148,1);
+}
+
+.cs-header{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.navbar-default .navbar-nav > .active > a{
+  color: #DD3416 !important;
+  background-color: #f8f8f8 !important;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+#navigation .navbar-nav{
+  width: 100%;
+}
+
+.cs-image-view{
+
+}
+
+.cs-image-grid-view{
+  
+}
